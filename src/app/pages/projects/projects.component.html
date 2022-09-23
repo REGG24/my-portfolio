@@ -1,0 +1,29 @@
+<section>
+    <div class="project" *ngFor="let project of projects"  >
+        <div class="project__content">
+            <div class="project__content__title">
+                {{ project.title }}
+            </div>
+            <div class="project__content__description">
+                {{ project.description }}
+            </div>
+            <div class="project__content__tools">
+                Technologies: <i>{{ project.tools }}</i> 
+            </div>
+            <div *ngIf="project.link" class="project__content__link">
+                <a [href]="project.link" target="_blank">
+                    See more >
+                </a>
+            </div>
+        </div>
+        <div *ngIf="project.platform === 'web'" class="project__image__webcontainer">
+            <img class="front_image" [src]="project.imgPath[0]" alt="anime_list_list">
+            <img class="back_image" [src]="project.imgPath[1]" alt="anime_list_card">
+        </div>
+        <div *ngIf="project.platform === 'android'" class="project__image__phonecontainer">
+            <img class="phone_image" [src]="project.imgPath[0]" alt="phone_sample_1">
+            <img class="phone_image" [src]="project.imgPath[1]" alt="phone_sample_2">
+            <img class="phone_image" [src]="project.imgPath[2]" alt="phone_sample_3">
+        </div>
+    </div>   
+</section>

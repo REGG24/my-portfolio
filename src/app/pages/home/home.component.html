@@ -1,0 +1,24 @@
+<section *ngIf="!imageLoaded" class="loader_section">
+    <div class="loader_container">
+        <span class="loader"></span>
+    </div>
+</section> 
+<section [hidden]="!imageLoaded">
+    <div class="container">
+        <div class="greeting">
+            Hi, I'm Ruben Esau Garcia Gomez
+        </div>
+        <div class="picture-container">
+            <div class="picture">
+                <img #lImage 
+                    src="../../../assets/img/colorful-min.png" 
+                    alt="my-picture" 
+                    
+                    (load)="setImageLoaded()"> 
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

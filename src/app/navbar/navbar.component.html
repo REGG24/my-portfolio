@@ -1,0 +1,30 @@
+<nav *ngIf="!navbar2Toggled" class="navbar1">
+    <span routerLink="/home" class="navbar1__home">
+        Home
+    </span>
+    <ul class="navbar1__links">
+        <li routerLink="about">About</li>
+        <li routerLink="/work">Work</li>
+        <li routerLink="/projects">Projects</li>
+        <a href="https://github.com/REGG24" target="_blank">
+            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/REGG24" target="_blank">
+            <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+        </a>
+    </ul>
+    <!-- If actual route is Home, Make this button disabled and activated after the animation ends (2 seconds I think) -->
+    <span class="navbar1__menu-button" (click)="toggleMenu()"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></span>
+</nav>
+<div *ngIf="navbar2Toggled" class="container">
+    <nav class="navbar2">
+        <span #navBar2_menu class="navbar2__menu-button" (click)="toggleMenu()"><i class="fa fa-times fa-lg" aria-hidden="true"></i></span>
+        <ul #navBar2_links class="navbar2__links">
+            <li routerLink="/about" (click)="choosePage()">About</li>
+            <li routerLink="/work" (click)="choosePage()">Work</li>
+            <li routerLink="/projects" (click)="choosePage()">Projects</li>
+            <li (click)="choosePage('https://github.com/REGG24')">Github</li>
+            <li (click)="choosePage('https://github.com/REGG24')">Linkedin</li>
+        </ul>
+    </nav> 
+</div>
