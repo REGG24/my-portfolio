@@ -7,6 +7,14 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    &:focus {
+        /* outline-color: transparent;
+        outline-style:solid;
+        box-shadow: 0 2px 0 0 #5a01a7; */
+        outline: none;
+    }
+
   }
   
   &__links {
@@ -27,12 +35,20 @@
     &__menu-button{
         display: none;
     }
+
+    .link:focus {
+        /* outline-color: transparent;
+        outline-style: none;
+        box-shadow: 0 2px 0 0 #5a01a7; */
+        outline: none;
+    }
 }
 
 
 .container {
     background-color: rgb(233, 235, 247);
-    position:absolute;
+    //background-color: rgb(233, 235, 247, 0.7);
+    position: fixed;
     width: 100%;
     height: 100vh;
     z-index: 2;
