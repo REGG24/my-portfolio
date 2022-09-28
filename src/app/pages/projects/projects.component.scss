@@ -1,3 +1,5 @@
+@import '../../../colors.scss';
+
 section {
     padding: 0 !important;
 }
@@ -6,7 +8,7 @@ section {
     display: flex;
     flex-direction: row;
     height: 390px;
-    background: linear-gradient(0deg, rgb(209, 214, 243) 0%, rgb(220, 223, 245) 100%);
+    background: linear-gradient(0deg, $project-gradent-1 0%, $project-gradent-2 100%);
     animation: moveInRight .5s ease-out;
    
     &__content {

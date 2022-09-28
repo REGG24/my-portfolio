@@ -28,6 +28,10 @@ section {
         justify-content: space-between;
         margin-bottom: 20px;
         font-size: 1.2rem;
+
+        .job__title {
+            margin-right: 10px;
+        }
     }
 
     &__description {
