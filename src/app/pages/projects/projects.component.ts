@@ -12,8 +12,8 @@ export class ProjectsComponent implements OnInit {
       title: 'Anime List',
       description: 'A CRUD application made to manage a list of animes series.',
       imgPath: [
-        "../../../assets/img/anime_list_card.PNG",
-        "../../../assets/img/anime_list_list.PNG"
+        "./assets/img/anime_list_card.PNG",
+        "./assets/img/anime_list_list.PNG"
       ],
       tools: 'React.js 17.0.2, NodeJS 14.17',
       platform: 'web'
@@ -22,8 +22,8 @@ export class ProjectsComponent implements OnInit {
       title: 'Library',
       description: 'A CRUD application to manage the data of a library',
       imgPath: [
-        "../../../assets/img/library_clients.PNG",
-        "../../../assets/img/library_books.PNG"
+        "./assets/img/library_clients.PNG",
+        "./assets/img/library_books.PNG"
       ],
       tools: 'Angular 11, Bootstrap 4, Spring boot 5.3, JPA, Hibernate, Java 8 and SQL Server',
       platform: 'web'
@@ -32,9 +32,9 @@ export class ProjectsComponent implements OnInit {
       title: 'Eliminacion Gaussiana',
       description: 'A mobile application for android that solves systems of linear equations published in the Play Store',
       imgPath: [
-        "../../../assets/img/principal.png",
-        "../../../assets/img/procedure.png",
-        "../../../assets/img/result.png"
+        "./assets/img/principal.png",
+        "./assets/img/procedure.png",
+        "./assets/img/result.png"
       ],
       tools: 'Java 8, Android Studio',
       platform: 'android',
