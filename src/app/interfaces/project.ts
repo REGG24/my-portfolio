@@ -4,5 +4,9 @@ export interface Project {
     imgPath: string[],
     tools: string,
     platform: string,
-    link?: string
+    link?: string,
+    github?: {
+        front?: string,
+        back?: string
+    }
 }

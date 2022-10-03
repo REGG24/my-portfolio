@@ -8,7 +8,7 @@ section {
     display: flex;
     flex-direction: row;
     height: 390px;
-    background: linear-gradient(0deg, $project-gradent-1 0%, $project-gradent-2 100%);
+    //background: linear-gradient(0deg, $project-gradent-1 0%, $project-gradent-2 100%);
     animation: moveInRight .5s ease-out;
    
     &__content {
@@ -110,6 +110,7 @@ section {
 @media only screen and (max-width: 760px) {
     .project {
         flex-direction: column;
+        height: 440px;
 
         &__content { 
             width: 100%;
@@ -145,6 +146,7 @@ section {
 
         &__image__phonecontainer {
             width: 100%;
+            margin-top: 25px;
             .phone_image:not(:last-child) {
                 margin-right: 20px;
             }

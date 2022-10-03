@@ -1,5 +1,6 @@
 <section>
-    <div class="project" *ngFor="let project of projects"  >
+    <div class="project" *ngFor="let project of projects; let i = index" 
+        [ngStyle]="{'background-color': (i + 1) % 2 === 0 ? 'rgb(209, 214, 243)' : 'rgb(220, 223, 245)'}">
         <div class="project__content">
             <div class="project__content__title">
                 {{ project.title }}
@@ -10,9 +11,19 @@
             <div class="project__content__tools">
                 Technologies: <i>{{ project.tools }}</i> 
             </div>
+            <div *ngIf="project.github?.front" class="project__content__link">
+                <a [href]="project.github?.front" target="_blank">
+                    See front-end code
+                </a>
+            </div>
+            <div *ngIf="project.github?.back" class="project__content__link">
+                <a [href]="project.github?.back" target="_blank">
+                    See back-end code
+                </a>
+            </div>
             <div *ngIf="project.link" class="project__content__link">
                 <a [href]="project.link" target="_blank">
-                    See more >
+                    See app >
                 </a>
             </div>
         </div>
