@@ -1,4 +1,41 @@
+@import '../../../colors.scss';
+
 section {
     animation: moveInTop .5s ease-out;
+
+    .main-text {
+        a {
+            color: rgb(128, 164, 218);
+            text-decoration: none;
+            position: relative;
+   
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 0px;
+                background: $project-gradent-1;
+                transition: all .2s;
+                z-index: -1;
+              }
+              
+              &:hover:before {
+                height: 100%;
+              }
+        }
+    }
+}
+
+@keyframes moveTop {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+ 
+    100% {
+        opacity: 1;
+        transform: translate(50rem);
+    }
 }
 
